@@ -2,19 +2,19 @@ var markdown = require('remark');
 var slug = require('remark-slug');
 var visit = require('unist-util-visit');
 
-module.exports = function getAnchors(content) {
+function getAnchors(content) {
   let anchors = [];
 
   markdown()
     .use(slug)
-    .use(pl)
+    .use(headings)
     .process(content, (err, file) => {
       if (err) {
         throw err;
       }
     });
 
-  function pl() {
+  function headings() {
     return function transformer(ast) {
       visit(ast, 'heading', visitor);
     };
@@ -28,4 +28,8 @@ module.exports = function getAnchors(content) {
   }
 
   return anchors;
-};
+}
+
+module.exports = {
+  getAnchors
+}

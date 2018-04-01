@@ -10,13 +10,14 @@ this branch:
 
 - [ ] Finish porting the markdown process to `remark` (may require new plugins)
 - [ ] Rethink external population process
-- [ ] Extract anchors into `_content.json` via `DirectoryTreePlugin`
+- [x] Extract anchors into `_content.json` via `DirectoryTreePlugin` (Fernando)
 - [ ] Finish re-incorporating mobile sidebar
 - [ ] Re-integrate google-analytics
 - [ ] Re-incorporate `redirects.json`
-- [x] Populate page title in `server.jsx` (fernando)
+- [x] Populate page title in `server.jsx` (Fernando)
 - [ ] Finish `Navigation` component (greg)
 - [x] Add custom route for landing page (greg)
+- [x] Fixed sidebar (Fernando)
 
 Some of these should be fairly quick adds now that the site works. The two
 toughest ones are most likely the markdown parsing and external population. The
