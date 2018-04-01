@@ -15,6 +15,8 @@ export default class Sidebar extends Component {
     let { fixed, availableHeight, maxWidth } = this.state;
     let group;
 
+    console.log(pages);
+
     return (
       <nav
         className={ `sidebar ${className}` }

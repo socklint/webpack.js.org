@@ -71,7 +71,7 @@ class Page extends React.Component {
     if ( this.props.content instanceof Promise ) {
       this.props.content
         .then(content => this.setState({
-          content
+          content: content.default
         }))
         .catch(error => this.setState({
           content: 'Error loading content.'

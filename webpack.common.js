@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const FrontMatter = require('front-matter');
+const getAnchors = require('./md');
 const CleanPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -35,7 +36,9 @@ module.exports = (env = {}) => ({
           options: {
             plugins: [
               // TODO: Add necessary remark plugins
+              require('remark-slug'),
               require('remark-autolink-headings'),
+              require('remark-html'),
               require('remark-mermaid')
             ]
           }
@@ -121,7 +124,7 @@ module.exports = (env = {}) => ({
           let content = fs.readFileSync(item.path, 'utf8')
           let { attributes } = FrontMatter(content)
           Object.assign(item, attributes)
-          item.anchors = [] // TODO: Add actual anchors
+          item.anchors = getAnchors(content)
 
         } else {
           // TODO: Add directory (section) attributes and index url (if necessary)
