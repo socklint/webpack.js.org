@@ -18,6 +18,7 @@ this branch:
 - [ ] Finish `Navigation` component (greg)
 - [x] Add custom route for landing page (greg)
 - [x] Fixed sidebar (Fernando)
+- [x] Add anchor icons (Fernando)
 
 Some of these should be fairly quick adds now that the site works. The two
 toughest ones are most likely the markdown parsing and external population. The
