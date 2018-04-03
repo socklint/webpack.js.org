@@ -8,7 +8,7 @@ easier to discuss...
 Here's the TLDR; in terms of actual blocking TODOs if we wanted to stick with
 this branch:
 
-- [ ] Finish porting the markdown process to `remark` (may require new plugins)
+- [ ] Finish porting the markdown process to `remark` (may require new plugins) (Fernando)
 - [ ] Rethink external population process
 - [x] Extract anchors into `_content.json` via `DirectoryTreePlugin` (Fernando)
 - [ ] Finish re-incorporating mobile sidebar
